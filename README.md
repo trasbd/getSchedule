@@ -33,11 +33,9 @@
   <a href="https://github.com/trasbd/getSchedule">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
-
+<br>
 <h3 align="center">getSchedule</h3>
-
   <p align="center">
-    project_description
     <br />
     <a href="https://github.com/trasbd/getSchedule"><strong>Explore the docs »</strong></a>
     <br />
@@ -83,7 +81,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Gets scheduled shifts from [SixFlags.Team](http://sixflags.team) and imports into Google Calendar to allow notifications and easy sharing.
+
+<br><img style="max-width: 50%; height: auto; " src="sixflagsteam.png">
+<br><img style="max-width: 50%; height: auto; " src="googlecal.png">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,7 +143,9 @@ To get a local copy up and running follow these simple example steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-
+   ```python
+   python .\getSchedule.py
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -151,10 +154,9 @@ To get a local copy up and running follow these simple example steps.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [ ] Update Calendar Events
+- [ ] Import Timesheets
+
 
 See the [open issues](https://github.com/trasbd/getSchedule/issues) for a full list of proposed features (and known issues).
 
