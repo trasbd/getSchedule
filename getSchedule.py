@@ -1,3 +1,12 @@
+# Thomas Robert
+# 06/30/2023
+# https://github.com/trasbd/getSchedule
+# 
+# Gets schedule from SixFlags.Team and imports into Google Calendar
+
+# pip install selenium
+# pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+
 import secrects
 
 from datetime import datetime
