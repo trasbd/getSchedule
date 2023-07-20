@@ -29,6 +29,7 @@ options = webdriver.ChromeOptions();
 options.add_experimental_option("prefs", {'profile.managed_default_content_settings.images': 2})
 
 options.add_argument("headless")
+options.add_argument("--no-sandbox") # required for docker run
 
 browser = webdriver.Chrome(options=options)
 
@@ -125,7 +126,11 @@ if not creds or not creds.valid:
 
 try:
     service = build('calendar', 'v3', credentials=creds)
-    now = datetime.today().isoformat() + 'Z'  # 'Z' indicates UTC time
+
+    dt = datetime.today()
+    now = datetime.combine(dt, datetime.min.time()).isoformat() + 'Z'
+
+    #now = datetime.today().isoformat() + 'Z'  # 'Z' indicates UTC time
     events_result = service.events().list(calendarId=calendarId, timeMin=now,
                                                 singleEvents=True,
                                                 orderBy='startTime').execute()
