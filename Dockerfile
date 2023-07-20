@@ -36,7 +36,7 @@ RUN pip install selenium
 RUN pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 
 
-#CMD ["python", "./getSchedule.py"] 
-CMD ["crond", "-f"]
+CMD ["python", "./getSchedule.py"] 
+#CMD ["crond", "-f"]
 #CMD ["bash"]
 # Or enter the name of your unique directory and parameter set.
