@@ -1,7 +1,7 @@
 FROM python:latest
 # Or any preferred Python version.
 
-WORKDIR /project
+WORKDIR /getSchedule
 
 ADD getSchedule.py .
 ADD credentials.json .
@@ -25,13 +25,16 @@ RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 ENV DISPLAY=:99
 
 
+# RUN apt-get install cron -y
+# RUN crontab crontab
+
+
 # upgrade pip
 RUN pip install --upgrade pip
 
 RUN pip install selenium
 RUN pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
 
-RUN crontab crontab
 
 #CMD ["python", "./getSchedule.py"] 
 CMD ["crond", "-f"]
