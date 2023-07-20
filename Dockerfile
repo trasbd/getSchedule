@@ -1,7 +1,5 @@
-FROM python
+FROM python:latest
 # Or any preferred Python version.
-
-
 
 WORKDIR /project
 
