@@ -7,7 +7,7 @@ ADD getSchedule.py .
 ADD credentials.json .
 ADD secrects.py .
 ADD token.json .
-ADD crontab .
+#ADD crontab .
 
 
 # install google chrome
