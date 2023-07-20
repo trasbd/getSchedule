@@ -1,5 +1,5 @@
-/calSample.py
-/credentials.json
-/secrects.py
-/token.json
-/__pycache__
+/getSchedule/calSample.py
+/getSchedule/credentials.json
+/getSchedule/secrects.py
+/getSchedule/token.json
+/getSchedule/__pycache__
