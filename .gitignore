@@ -3,3 +3,9 @@
 /getSchedule/secrects.py
 /getSchedule/token.json
 /getSchedule/__pycache__
+
+/calSample.py
+/credentials.json
+/secrects.py
+/token.json
+/__pycache__
