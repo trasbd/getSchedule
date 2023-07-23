@@ -128,7 +128,7 @@ try:
     service = build('calendar', 'v3', credentials=creds)
 
     dt = datetime.today()
-    now = datetime.combine(dt, datetime.min.time()).isoformat() + 'Z'
+    now = datetime.combine(dt, datetime.min.time()).isoformat() + '-06:00'
 
     #now = datetime.today().isoformat() + 'Z'  # 'Z' indicates UTC time
     events_result = service.events().list(calendarId=calendarId, timeMin=now,
