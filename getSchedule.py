@@ -58,7 +58,10 @@ for row in scheduleRows[1:]:
         shiftLocation = rowTD[3].text
         shiftTimes    = rowTD[5].text.split(" - ")
         shiftStart    = datetime.combine(shiftDate, datetime.strptime(shiftTimes[0], "%I:%M %p").time())
-        shiftEnd      = datetime.combine(shiftDate, datetime.strptime(shiftTimes[1], "%I:%M %p").time())
+        if shiftTimes[1] < shiftTimes[0]
+            shiftEnd      = datetime.combine(shiftDate+1, datetime.strptime(shiftTimes[1], "%I:%M %p").time())
+        else
+            shiftEnd      = datetime.combine(shiftDate, datetime.strptime(shiftTimes[1], "%I:%M %p").time())
 
         # print(scheduleId)
         # print(shiftStart)
