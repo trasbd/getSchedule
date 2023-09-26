@@ -1,6 +1,6 @@
 name: "get_schedule"
 description: "My first real add-on!"
-version: "1.1.8"
+version: "1.1.9"
 slug: "get_schedule"
 init: false
 arch:

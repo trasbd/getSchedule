@@ -9,7 +9,7 @@
 
 import secrects
 
-from datetime import datetime
+from datetime import datetime, timedelta
 import os.path
 
 from selenium import webdriver
@@ -59,7 +59,7 @@ for row in scheduleRows[1:]:
         shiftTimes    = rowTD[5].text.split(" - ")
         shiftStart    = datetime.combine(shiftDate, datetime.strptime(shiftTimes[0], "%I:%M %p").time())
         if datetime.strptime(shiftTimes[1], "%I:%M %p").time() < datetime.strptime(shiftTimes[0], "%I:%M %p").time():
-            shiftEnd      = datetime.combine(shiftDate+ datetime.timedelta(days=1), datetime.strptime(shiftTimes[1], "%I:%M %p").time()) 
+            shiftEnd      = datetime.combine(shiftDate + timedelta(days=1), datetime.strptime(shiftTimes[1], "%I:%M %p").time()) 
         else:
             shiftEnd      = datetime.combine(shiftDate, datetime.strptime(shiftTimes[1], "%I:%M %p").time())
 
